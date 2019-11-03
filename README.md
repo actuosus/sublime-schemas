@@ -104,6 +104,9 @@ Add to .vscode/settings.json:
 
 ## Intermediate Schema Generation
 
+JSON Schema can be generated based on any JSON file using [dedicated script](./scripts/generate-json-schema.js).
+Schemas is written to `build` folder and can be used as bootstap template for the final ones.
+
 ### Install Node.js
 
 https://nodejs.org/en/download/package-manager/
