@@ -2,22 +2,27 @@
     "$schema": "http://json-schema.org/draft-07/schema",
     "$id": "sublime-workspace",
     "title": "Sublime Workspace",
+    "description": "Workspace file would be saved when you explicitly save the workspace or change any items in current workspace.",
     "type": "object",
     "definitions": {
         "ui_element": {
             "type": "object",
             "properties": {
                 "height": {
-                    "type": "number"
+                    "type": "number",
+                    "description": "Element height."
                 },
                 "last_filter": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "Last filter string."
                 },
                 "selected_items": {
-                    "type": "array"
+                    "type": "array",
+                    "description": "List of selected items."
                 },
                 "width": {
-                    "type": "number"
+                    "type": "number",
+                    "description": "Element width."
                 }
             }
         }
@@ -32,15 +37,16 @@
             }
         },
         "buffers": {
-            "type": "array"
+            "type": "array",
+            "description": "List of buffers for the workspace."
         },
         "build_system": {
             "type": "string",
-            "description": "Seleted build system for workspace"
+            "description": "Build system for the workspace."
         },
         "build_system_choices": {
             "type": "array",
-            "description": "Build systems available for workspace"
+            "description": "Build systems available for the workspace."
         },
         "build_varint": {
             "type": "string",
@@ -92,11 +98,11 @@
             "items": {
                 "type": "string"
             },
-            "description": "Workspace expanded folders state"
+            "description": "List of expanded folders in the workspace."
         },
         "file_history": {
             "type": "array",
-            "description": "Opened files history state"
+            "description": "List of files that have been opened or edited in the workspace."
         },
         "find": {
             "type": "object",
@@ -223,16 +229,19 @@
             }
         },
         "pinned_build_system": {
-            "type": "string"
+            "type": "string",
+            "description": "Workspace build system that has been pinned"
         },
         "project": {
-            "type": "string"
+            "type": "string",
+            "description": "Project path for the workspace."
         },
         "replace": {
             "type": "object"
         },
         "save_all_on_build": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Save all edited files when executing build for the workspace."
         },
         "select_file": {
             "type": "object",
@@ -250,22 +259,28 @@
             "type": "number"
         },
         "show_minimap": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Minimap visibily workspace configuration"
         },
         "show_open_files": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Open files visibility workspace configuration"
         },
         "show_tabs": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Tabs visibility workspace configuration"
         },
         "side_bar_visible": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Sidebar visibility workspace configuration"
         },
         "side_bar_width": {
-            "type": "number"
+            "type": "number",
+            "description": "Sidebar width workspace configuration"
         },
         "status_bar_visible": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Status bar visibility workspace configuration"
         },
         "template_settings": {
             "type": "object"
@@ -339,9 +354,12 @@
                 "required": [
                     "name"
                 ]
-            }
+            },
+            "title": "Workspace folders",
+            "description": "List of folders to be loaded in the workspace."
         },
         "settings": {
+            "title": "Workspace settings",
             "description": "Settings may be specified here using the settings key, and will override regular user settings.",
             "$ref": "./sublime-settings.schema.json"
         },
