@@ -7,7 +7,7 @@ This schemas can help configure Sublime Text project and settings for your fello
 
 
 ## [Sublime Settings](./src/schemas/json/sublime-settings.schema.json)
-[Settings JSON Schema](https://www.sublimetext.com/docs/3/settings.html)
+[Settings User Documentation](https://www.sublimetext.com/docs/3/settings.html)
 [Official Settings Documentation](http://docs.sublimetext.info/en/latest/customization/settings.html)
 
 Relates to conversion from [Sublime Text settings to Visual Studio Code settings](https://github.com/Microsoft/vscode-sublime-keybindings).
@@ -32,10 +32,8 @@ Add to .vscode/settings.json:
 ```
 
 
-## [Sublime Project](https://www.sublimetext.com/docs/3/projects.html)
-
-[Project JSON Schema](./src/schemas/json/sublime-project.schema.json)
-
+## [Sublime Project](./src/schemas/json/sublime-project.schema.json)
+[Project User Documentation](https://www.sublimetext.com/docs/3/projects.html)
 [Official Project Documentation](http://docs.sublimetext.info/en/latest/file_management/projects.html)
 
 ### Usage
@@ -59,9 +57,6 @@ Add to .vscode/settings.json:
 
 
 ## [Sublime Workspace](./src/schemas/json/sublime-workspace.schema.json)
-
-[Workspace JSON Schema](./src/schemas/json/sublime-workspace.schema.json)
-
 [Official Workspace Documentation](http://docs.sublimetext.info/en/latest/file_management/projects.html#workspaces)
 
 ### Usage
@@ -85,9 +80,7 @@ Add to .vscode/settings.json:
 
 
 ## [Sublime Build System](./src/schemas/json/sublime-build.schema.json)
-
 [Build System JSON Schema](./src/schemas/json/sublime-build.schema.json)
-
 [Official Workspace Documentation](https://www.sublimetext.com/docs/3/build_systems.html)
 
 ### Usage
