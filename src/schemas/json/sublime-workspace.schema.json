@@ -35,17 +35,21 @@
             "type": "array"
         },
         "build_system": {
-            "type": "string"
+            "type": "string",
+            "description": "Seleted build system for workspace"
         },
         "build_system_choices": {
-            "type": "array"
+            "type": "array",
+            "description": "Build systems available for workspace"
         },
         "build_varint": {
-            "type": "string"
+            "type": "string",
+            "description": "Seleted build system variant for workspace"
         },
         "command_palette": {
             "type": "object",
-            "$ref": "#/definitions/ui_element"
+            "$ref": "#/definitions/ui_element",
+            "description": "Command palette state configuration"
         },
         "console": {
             "type": "object",
@@ -56,7 +60,8 @@
                 "history": {
                     "type": "array"
                 }
-            }
+            },
+            "description": "Console state configuration"
         },
         "distraction_free": {
             "type": "object",
@@ -79,16 +84,19 @@
                 "status_bar_visible": {
                     "type": "boolean"
                 }
-            }
+            },
+            "description": "Workspace distraction free configuration"
         },
         "expanded_folders": {
             "type": "array",
             "items": {
                 "type": "string"
-            }
+            },
+            "description": "Workspace expanded folders state"
         },
         "file_history": {
-            "type": "array"
+            "type": "array",
+            "description": "Opened files history state"
         },
         "find": {
             "type": "object",

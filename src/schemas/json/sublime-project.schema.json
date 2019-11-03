@@ -72,11 +72,9 @@
                         "type": "boolean",
                         "description": "If symlinks should be followed when building the folder tree."
                     }
-                },
-                "required": [
-                    "name"
-                ]
-            }
+                }
+            },
+            "description": "Folder references configuration for a project"
         },
         "settings": {
             "description": "Settings may be specified here using the settings key, and will override regular user settings.",
