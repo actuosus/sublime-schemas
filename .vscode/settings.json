@@ -1,3 +1,17 @@
 {
-    "cSpell.enabled": false
+    "cSpell.enabled": false,
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "/**/*.sublime-project"
+            ],
+            "url": "https://raw.githubusercontent.com/actuosus/sublime-schemas/master/src/schemas/json/sublime-project.schema.json"
+        },
+        {
+            "fileMatch": [
+                "/**/*.sublime-workspace"
+            ],
+            "url": "https://raw.githubusercontent.com/actuosus/sublime-schemas/master/src/schemas/json/sublime-workspace.schema.json"
+        }
+    ]
 }

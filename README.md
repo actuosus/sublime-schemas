@@ -25,7 +25,7 @@ Add to .vscode/settings.json:
             "fileMatch": [
                 "/**/*.sublime-settings"
             ],
-            "url": "https://raw.githubusercontent.com/actuosus/sublime-schemas/src/schemas/json/sublime-settings.schema.json"
+            "url": "https://raw.githubusercontent.com/actuosus/sublime-schemas/master/src/schemas/json/sublime-settings.schema.json"
         }
     ]
 }
@@ -51,7 +51,7 @@ Add to .vscode/settings.json:
             "fileMatch": [
                 "/**/*.sublime-project"
             ],
-            "url": "https://raw.githubusercontent.com/actuosus/sublime-schemas/src/schemas/json/sublime-project.schema.json"
+            "url": "https://raw.githubusercontent.com/actuosus/sublime-schemas/master/src/schemas/json/sublime-project.schema.json"
         }
     ]
 }
@@ -77,7 +77,7 @@ Add to .vscode/settings.json:
             "fileMatch": [
                 "/**/*.sublime-workspace"
             ],
-            "url": "https://raw.githubusercontent.com/actuosus/sublime-schemas/src/schemas/json/sublime-workspace.schema.json"
+            "url": "https://raw.githubusercontent.com/actuosus/sublime-schemas/master/src/schemas/json/sublime-workspace.schema.json"
         }
     ]
 }
@@ -103,7 +103,7 @@ Add to .vscode/settings.json:
             "fileMatch": [
                 "/**/*.sublime-build"
             ],
-            "url": "https://raw.githubusercontent.com/actuosus/sublime-schemas/src/schemas/json/sublime-build.schema.json"
+            "url": "https://raw.githubusercontent.com/actuosus/sublime-schemas/master/src/schemas/json/sublime-build.schema.json"
         }
     ]
 }
