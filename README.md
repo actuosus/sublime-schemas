@@ -1,7 +1,7 @@
 # [Sublime Text](https://www.sublimetext.com/) configuration files [JSON schemas](http://json-schema.org)
 All JSON schemas based on [Draft 07](http://json-schema.org/draft-07/schema) Core meta-schema.
 
-Write and vadidate Sublime Text related configuration files in editors that supports JSON Schema (JetBrains, [Visual Studio Code](https://code.visualstudio.com/docs/languages/json#_json-schemas-and-settings)).
+Write and validate Sublime Text related configuration files in editors that supports JSON Schema (JetBrains, [Visual Studio Code](https://code.visualstudio.com/docs/languages/json#_json-schemas-and-settings)).
 
 This schemas can help configure Sublime Text project and settings for your fellow collegues that use Sublime Text editor and you work on that together.
 
@@ -122,3 +122,4 @@ npm run generate-settings
 * prepare to contribute to [JSON Schema Store](http://schemastore.org/json/)
 * project configuration sync with VS Code (extension?)
 * project configuration sync with JetBrains (plugin?)
+* final schemas validatation and testing
