@@ -1,0 +1,359 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "sublime-workspace",
+    "title": "Sublime Workspace",
+    "type": "object",
+    "definitions": {
+        "ui_element": {
+            "type": "object",
+            "properties": {
+                "height": {
+                    "type": "number"
+                },
+                "last_filter": {
+                    "type": "string"
+                },
+                "selected_items": {
+                    "type": "array"
+                },
+                "width": {
+                    "type": "number"
+                }
+            }
+        }
+    },
+    "properties": {
+        "auto_complete": {
+            "type": "object",
+            "properties": {
+                "selected_items": {
+                    "type": "array"
+                }
+            }
+        },
+        "buffers": {
+            "type": "array"
+        },
+        "build_system": {
+            "type": "string"
+        },
+        "build_system_choices": {
+            "type": "array"
+        },
+        "build_varint": {
+            "type": "string"
+        },
+        "command_palette": {
+            "type": "object",
+            "$ref": "#/definitions/ui_element"
+        },
+        "console": {
+            "type": "object",
+            "properties": {
+                "height": {
+                    "type": "number"
+                },
+                "history": {
+                    "type": "array"
+                }
+            }
+        },
+        "distraction_free": {
+            "type": "object",
+            "properties": {
+                "menu_visible": {
+                    "type": "boolean"
+                },
+                "show_minimap": {
+                    "type": "boolean"
+                },
+                "show_open_files": {
+                    "type": "boolean"
+                },
+                "show_tabs": {
+                    "type": "boolean"
+                },
+                "side_bar_visible": {
+                    "type": "boolean"
+                },
+                "status_bar_visible": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "expanded_folders": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "file_history": {
+            "type": "array"
+        },
+        "find": {
+            "type": "object",
+            "properties": {
+                "height": {
+                    "type": "number"
+                }
+            }
+        },
+        "find_in_files": {
+            "type": "object",
+            "properties": {
+                "height": {
+                    "type": "number"
+                },
+                "where_history": {
+                    "type": "array"
+                }
+            }
+        },
+        "find_state": {
+            "type": "object",
+            "properties": {
+                "case_sensitive": {
+                    "type": "boolean"
+                },
+                "find_history": {
+                    "type": "array"
+                },
+                "highlight": {
+                    "type": "boolean"
+                },
+                "in_selection": {
+                    "type": "boolean"
+                },
+                "preserve_case": {
+                    "type": "boolean"
+                },
+                "regex": {
+                    "type": "boolean"
+                },
+                "replace_history": {
+                    "type": "array"
+                },
+                "reverse": {
+                    "type": "boolean"
+                },
+                "show_context": {
+                    "type": "boolean"
+                },
+                "use_buffer2": {
+                    "type": "boolean"
+                },
+                "whole_word": {
+                    "type": "boolean"
+                },
+                "wrap": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "groups": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "sheets": {
+                        "type": "array"
+                    }
+                }
+            }
+        },
+        "incremental_find": {
+            "type": "object",
+            "properties": {
+                "height": {
+                    "type": "number"
+                }
+            }
+        },
+        "input": {
+            "type": "object",
+            "properties": {
+                "height": {
+                    "type": "number"
+                }
+            }
+        },
+        "layout": {
+            "type": "object",
+            "properties": {
+                "cells": {
+                    "type": "array",
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "number"
+                        }
+                    }
+                },
+                "cols": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    }
+                },
+                "rows": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    }
+                }
+            }
+        },
+        "menu_visible": {
+            "type": "boolean"
+        },
+        "output.find_results": {
+            "type": "object",
+            "properties": {
+                "height": {
+                    "type": "number"
+                }
+            }
+        },
+        "pinned_build_system": {
+            "type": "string"
+        },
+        "project": {
+            "type": "string"
+        },
+        "replace": {
+            "type": "object"
+        },
+        "save_all_on_build": {
+            "type": "boolean"
+        },
+        "select_file": {
+            "type": "object",
+            "$ref": "#/definitions/ui_element"
+        },
+        "select_project": {
+            "type": "object",
+            "$ref": "#/definitions/ui_element"
+        },
+        "select_symbol": {
+            "type": "object",
+            "$ref": "#/definitions/ui_element"
+        },
+        "selected_group": {
+            "type": "number"
+        },
+        "show_minimap": {
+            "type": "boolean"
+        },
+        "show_open_files": {
+            "type": "boolean"
+        },
+        "show_tabs": {
+            "type": "boolean"
+        },
+        "side_bar_visible": {
+            "type": "boolean"
+        },
+        "side_bar_width": {
+            "type": "number"
+        },
+        "status_bar_visible": {
+            "type": "boolean"
+        },
+        "template_settings": {
+            "type": "object"
+        },
+        "folders": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "A string used in place of the folder name in the side bar."
+                    },
+                    "path": {
+                        "type": "string"
+                    },
+                    "folder_include_patterns": {
+                        "type": "array",
+                        "description": "A list of strings for subfolder paths to include from the folder.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "folder_exclude_patterns": {
+                        "type": "array",
+                        "description": "A list of strings for subfolder paths to exclude from the folder.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "file_include_patterns": {
+                        "type": "array",
+                        "description": "A list of strings for filenames to include from the folder.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "file_exclude_patterns": {
+                        "type": "array",
+                        "description": "A list of strings for filenames to exclude from the folder.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "binary_file_patterns": {
+                        "type": "array",
+                        "description": "A list of strings for filenames to treat as binary files, and thus ignored in Goto Anything or Find in Files.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "index_include_patterns": {
+                        "type": "array",
+                        "description": "A list of strings for full file paths to index in the folder.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "index_exclude_patterns": {
+                        "type": "array",
+                        "description": "A list of strings for file full paths to index in the folder.",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "follow_symlinks": {
+                        "type": "boolean",
+                        "description": "If symlinks should be followed when building the folder tree."
+                    }
+                },
+                "required": [
+                    "name"
+                ]
+            }
+        },
+        "settings": {
+            "description": "Settings may be specified here using the settings key, and will override regular user settings.",
+            "$ref": "./sublime-settings.schema.json"
+        },
+        "build_systems": {
+            "type": "array",
+            "description": "build_systems specifices a list of inline Build Systems definitions.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "shell_cmd": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,1064 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "sublime-settings",
+    "title": "Sublime Settings",
+    "description": "Place your settings in the file \"Packages/User/Preferences.sublime-settings\", which overrides the settings in here. Settings may also be placed in syntax-specific setting files, for example, in Packages/User/Python.sublime-settings for python files.",
+    "type": "object",
+    "properties": {
+        "color_scheme": {
+            "type": "string",
+            "title": "Sets the colors used within the text area",
+            "default": "Monokai.sublime-color-scheme"
+        },
+        "font_face": {
+            "type": "string",
+            "description": "Note that the font_face are overridden in the platform specific settings file, for example, \"Preferences (Linux).sublime-settings\". Because of this, setting them here will have no effect: you must set them in your User File Preferences.",
+            "default": ""
+        },
+        "font_size": {
+            "type": "number",
+            "description": "Note that the font_size are overridden in the platform specific settings file",
+            "minimum": 0,
+            "default": 10
+        },
+        "font_options": {
+            "type": "array",
+            "description": "Valid options on all platforms are:\n  - \"no_bold\": Disables bold text\n  - \"no_italic\": Disables italic text\n Antialiasing options:\n  - \"no_antialias\": Disables antialiasing\n  - \"gray_antialias\": Uses grayscale antialiasing instead of subpixel\n Ligature options:\n  - \"no_liga\": Disables standard ligatures (OpenType liga feature)\n  - \"no_clig\": Disables contextual ligatures (OpenType clig feature)\n  - \"no_calt\": Disables contextual alternatives (OpenType calt feature)\n  - \"dlig\": Enables discretionary ligatures (OpenType dlig feature)\n  - \"ss01\": Enables OpenType stylistic set 1. Can enable sets 1 to 10\n        by changing the last two digits.\n Windows-only options:\n  - \"directwrite\": (default) Use DirectWrite for font rendering\n  - \"gdi\": Use GDI for font rendering\n  - \"dwrite_cleartype_classic\": Only applicable to \"directwrite\" mode,\n        should render fonts similar to traditional GDI\n  - \"dwrite_cleartype_natural\": Only applicable to \"directwrite\" mode,\n        should render fonts similar to ClearType \"natural quality\" GDI\n  - \"subpixel_antialias\": Force ClearType antialiasing when disabled\n        at system level\n Mac-only options:\n  - \"no_round\": Don't round glyph widths for monospace fonts when\n        \"font_size\" is small.",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "no_bold",
+                    "no_italic",
+                    "no_antialias",
+                    "gray_antialias",
+                    "no_liga",
+                    "no_clig",
+                    "no_calt",
+                    "dlig",
+                    "ss01",
+                    "directwrite",
+                    "gdi",
+                    "dwrite_cleartype_classic",
+                    "dwrite_cleartype_natural",
+                    "subpixel_antialias",
+                    "no_round"
+                ],
+                "anyOf": [
+                    {
+                        "oneOf": [
+                            {
+                                "enum": [
+                                    "no_bold"
+                                ],
+                                "description": "Disables bold text"
+                            },
+                            {
+                                "enum": [
+                                    "no_italic"
+                                ],
+                                "description": "Disables italic text"
+                            },
+                            {
+                                "enum": [
+                                    "no_antialias"
+                                ],
+                                "description": "Disables antialiasing"
+                            },
+                            {
+                                "enum": [
+                                    "gray_antialias"
+                                ],
+                                "description": "Uses grayscale antialiasing instead of subpixel"
+                            },
+                            {
+                                "enum": [
+                                    "no_liga"
+                                ],
+                                "description": "Disables antialiasing"
+                            },
+                            {
+                                "enum": [
+                                    "no_clig"
+                                ],
+                                "description": "Disables contextual ligatures (OpenType clig feature)"
+                            },
+                            {
+                                "enum": [
+                                    "no_calt"
+                                ],
+                                "description": "Disables contextual alternatives (OpenType calt feature)"
+                            },
+                            {
+                                "enum": [
+                                    "dlig"
+                                ],
+                                "description": "Enables discretionary ligatures (OpenType dlig feature)"
+                            },
+                            {
+                                "enum": [
+                                    "ss01"
+                                ],
+                                "description": "Enables OpenType stylistic set 1. Can enable sets 1 to 10 by changing the last two digits."
+                            },
+                            {
+                                "enum": [
+                                    "directwrite"
+                                ],
+                                "description": "(default) Use DirectWrite for font rendering"
+                            },
+                            {
+                                "enum": [
+                                    "gdi"
+                                ],
+                                "description": "Use GDI for font rendering"
+                            },
+                            {
+                                "enum": [
+                                    "dwrite_cleartype_classic"
+                                ],
+                                "description": "Only applicable to \"directwrite\" mode, should render fonts similar to traditional GDI"
+                            },
+                            {
+                                "enum": [
+                                    "dwrite_cleartype_natural"
+                                ],
+                                "description": "Only applicable to \"directwrite\" mode, should render fonts similar to ClearType \"natural quality\" GDI"
+                            },
+                            {
+                                "enum": [
+                                    "subpixel_antialias"
+                                ],
+                                "description": "Force ClearType antialiasing when disabled at system level"
+                            },
+                            {
+                                "enum": [
+                                    "no_round"
+                                ],
+                                "description": "Don't round glyph widths for monospace fonts when \"font_size\" is small."
+                            }
+                        ]
+                    }
+                ],
+                "minLength": 3,
+                "maxLength": 24
+            },
+            "default": [],
+            "examples": [
+                [
+                    "no_bold",
+                    "no_italic"
+                ]
+            ]
+        },
+        "theme_font_options": {
+            "type": "array",
+            "title": "Font options for theme text",
+            "description": "Valid options are the same as \"font_options\", except \"no_bold\" and \"no_italic\" are not supported",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "no_antialias",
+                    "gray_antialias",
+                    "no_liga",
+                    "no_clig",
+                    "no_calt",
+                    "dlig",
+                    "ss01",
+                    "directwrite",
+                    "gdi",
+                    "dwrite_cleartype_classic",
+                    "dwrite_cleartype_natural",
+                    "subpixel_antialias",
+                    "no_round"
+                ],
+                "anyOf": [
+                    {
+                        "oneOf": [
+                            {
+                                "enum": [
+                                    "no_antialias"
+                                ],
+                                "description": "Disables antialiasing"
+                            },
+                            {
+                                "enum": [
+                                    "gray_antialias"
+                                ],
+                                "description": "Uses grayscale antialiasing instead of subpixel"
+                            },
+                            {
+                                "enum": [
+                                    "no_liga"
+                                ],
+                                "description": "Disables antialiasing"
+                            },
+                            {
+                                "enum": [
+                                    "no_clig"
+                                ],
+                                "description": "Disables contextual ligatures (OpenType clig feature)"
+                            },
+                            {
+                                "enum": [
+                                    "no_calt"
+                                ],
+                                "description": "Disables contextual alternatives (OpenType calt feature)"
+                            },
+                            {
+                                "enum": [
+                                    "dlig"
+                                ],
+                                "description": "Enables discretionary ligatures (OpenType dlig feature)"
+                            },
+                            {
+                                "enum": [
+                                    "ss01"
+                                ],
+                                "description": "Enables OpenType stylistic set 1. Can enable sets 1 to 10 by changing the last two digits."
+                            },
+                            {
+                                "enum": [
+                                    "directwrite"
+                                ],
+                                "description": "(default) Use DirectWrite for font rendering"
+                            },
+                            {
+                                "enum": [
+                                    "gdi"
+                                ],
+                                "description": "Use GDI for font rendering"
+                            },
+                            {
+                                "enum": [
+                                    "dwrite_cleartype_classic"
+                                ],
+                                "description": "Only applicable to \"directwrite\" mode, should render fonts similar to traditional GDI"
+                            },
+                            {
+                                "enum": [
+                                    "dwrite_cleartype_natural"
+                                ],
+                                "description": "Only applicable to \"directwrite\" mode, should render fonts similar to ClearType \"natural quality\" GDI"
+                            },
+                            {
+                                "enum": [
+                                    "subpixel_antialias"
+                                ],
+                                "description": "Force ClearType antialiasing when disabled at system level"
+                            },
+                            {
+                                "enum": [
+                                    "no_round"
+                                ],
+                                "description": "Don't round glyph widths for monospace fonts when \"font_size\" is small."
+                            }
+                        ]
+                    }
+                ],
+                "minLength": 3,
+                "maxLength": 24
+            },
+            "default": [],
+            "examples": [
+                [
+                    "no_liga",
+                    "no_clig"
+                ]
+            ]
+        },
+        "word_separators": {
+            "type": "string",
+            "title": "Characters that are considered to separate words",
+            "default": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?"
+        },
+        "line_numbers": {
+            "type": "boolean",
+            "title": "Set to false to prevent line numbers being drawn in the gutter",
+            "default": true
+        },
+        "gutter": {
+            "type": "boolean",
+            "title": "Set to false to hide the gutter altogether",
+            "default": true
+        },
+        "margin": {
+            "type": "number",
+            "title": "Spacing between the gutter and the text",
+            "minimum": 0,
+            "default": 4
+        },
+        "fold_buttons": {
+            "type": "boolean",
+            "title": "Fold buttons are the triangles shown in the gutter to fold regions of text",
+            "default": true
+        },
+        "fade_fold_buttons": {
+            "type": "boolean",
+            "title": "Hides the fold buttons unless the mouse is over the gutter",
+            "default": true
+        },
+        "mini_diff": {
+            "type": [
+                "string",
+                "boolean"
+            ],
+            "title": "Indicate modified lines in the gutter",
+            "description": " - true: Enables modified line indicators on all files\n - \"auto\": Enables modified line indicators on tracked files within Git\n - false: Disables modified line indicators",
+            "enum": [
+                "auto",
+                true,
+                false
+            ],
+            "default": true,
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "boolean"
+                }
+            ]
+        },
+        "rulers": {
+            "type": "array",
+            "title": "Columns in which to display vertical rulers",
+            "default": []
+        },
+        "spell_check": {
+            "type": "boolean",
+            "title": "Set to true to turn spell checking on by default",
+            "default": false
+        },
+        "tab_size": {
+            "type": "number",
+            "title": "The number of spaces a tab is considered equal to",
+            "minimum": 0,
+            "default": 4
+        },
+        "translate_tabs_to_spaces": {
+            "type": "boolean",
+            "title": "Set to true to insert spaces when tab is pressed",
+            "default": false
+        },
+        "use_tab_stops": {
+            "type": "boolean",
+            "title": "If translate_tabs_to_spaces is true, use_tab_stops will make tab and backspace insert/delete up to the next tabstop",
+            "default": true
+        },
+        "detect_indentation": {
+            "type": "boolean",
+            "title": "Set to false to disable detection of tabs vs. spaces on load",
+            "default": true
+        },
+        "auto_indent": {
+            "type": "boolean",
+            "title": "Calculates indentation automatically when pressing enter",
+            "default": true
+        },
+        "smart_indent": {
+            "type": "boolean",
+            "title": "Makes auto indent a little smarter, e.g., by indenting the next line after an if statement in C.",
+            "description": "Requires auto_indent to be enabled.",
+            "default": true
+        },
+        "indent_to_bracket": {
+            "type": "boolean",
+            "title": "Adds whitespace up to the first open bracket when indenting.",
+            "description": "Requires auto_indent to be enabled.",
+            "default": false
+        },
+        "trim_automatic_white_space": {
+            "type": "boolean",
+            "title": "Trims white space added by auto_indent when moving the caret off the line.",
+            "default": true
+        },
+        "word_wrap": {
+            "type": [
+                "string",
+                "boolean"
+            ],
+            "title": "Disables horizontal scrolling if enabled.",
+            "description": "May be set to true, false, or \"auto\", where it will be disabled for source code, and otherwise enabled.",
+            "enum": [
+                "auto",
+                true,
+                false
+            ],
+            "default": "auto",
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "boolean"
+                }
+            ]
+        },
+        "wrap_width": {
+            "type": "number",
+            "title": "Set to a value other than 0 to force wrapping at that column rather than the window width",
+            "minimum": 0,
+            "default": 0
+        },
+        "indent_subsequent_lines": {
+            "type": "boolean",
+            "title": "Set to false to prevent word wrapped lines from being indented to the same level",
+            "default": true
+        },
+        "draw_centered": {
+            "type": "boolean",
+            "title": "Draws text centered in the window rather than left aligned",
+            "default": false
+        },
+        "auto_match_enabled": {
+            "type": "boolean",
+            "title": "Controls auto pairing of quotes, brackets etc",
+            "default": true
+        },
+        "dictionary": {
+            "type": "string",
+            "title": "Word list to use for spell checking",
+            "default": "Packages/Language - English/en_US.dic"
+        },
+        "spelling_selector": {
+            "type": "string",
+            "title": "Sets which scopes are checked for spelling errors",
+            "default": "markup.raw, source string.quoted - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag)"
+        },
+        "draw_minimap_border": {
+            "type": "boolean",
+            "title": "Set to true to draw a border around the visible rectangle on the minimap.",
+            "description": "The color of the border will be determined by the \"minimapBorder\" key in the color scheme",
+            "default": false
+        },
+        "always_show_minimap_viewport": {
+            "type": "boolean",
+            "title": "Always visualise the viewport on the minimap, as opposed to only showing it on mouse over",
+            "default": false
+        },
+        "highlight_line": {
+            "type": "boolean",
+            "title": "If enabled, will highlight any line with a caret",
+            "default": false
+        },
+        "caret_style": {
+            "type": "string",
+            "title": "Valid values are \"smooth\", \"phase\", \"blink\" and \"solid\".",
+            "enum": [
+                "smooth",
+                "phase",
+                "blink",
+                "solid"
+            ],
+            "default": "smooth"
+        },
+        "caret_extra_top": {
+            "type": "number",
+            "title": "These settings control the size of the caret",
+            "minimum": 0,
+            "default": 2
+        },
+        "caret_extra_bottom": {
+            "type": "number",
+            "title": "These settings control the size of the caret",
+            "minimum": 0,
+            "default": 2
+        },
+        "caret_extra_width": {
+            "type": "number",
+            "title": "These settings control the size of the caret",
+            "minimum": 0,
+            "default": 1
+        },
+        "block_caret": {
+            "type": "boolean",
+            "title": "When enabled, the caret will be drawn as a rectangle, using the width of the current character",
+            "default": false
+        },
+        "match_brackets": {
+            "type": "boolean",
+            "title": "Set to false to disable underlining the brackets surrounding the caret",
+            "default": true
+        },
+        "match_brackets_content": {
+            "type": "boolean",
+            "title": "Set to false if you'd rather only highlight the brackets when the caret is next to one",
+            "default": true
+        },
+        "match_brackets_square": {
+            "type": "boolean",
+            "title": "Set to false to not highlight square brackets. This only takes effect if match_brackets is true",
+            "default": true
+        },
+        "match_brackets_braces": {
+            "type": "boolean",
+            "title": "Set to false to not highlight angle brackets. This only takes effect if match_brackets is true",
+            "default": true
+        },
+        "match_brackets_angle": {
+            "type": "boolean",
+            "title": "Set to false to not highlight angle brackets. This only takes effect if match_brackets is true",
+            "default": false
+        },
+        "match_tags": {
+            "type": "boolean",
+            "title": "Enable visualization of the matching tag in HTML and XML",
+            "default": true
+        },
+        "match_selection": {
+            "type": "boolean",
+            "title": "Highlights other occurrences of the currently selected text",
+            "default": true
+        },
+        "line_padding_top": {
+            "type": "number",
+            "title": "Additional spacing at the top of each line, in pixels",
+            "minimum": 0,
+            "default": 0
+        },
+        "line_padding_bottom": {
+            "type": "number",
+            "title": "Additional spacing at the bottom of each line, in pixels",
+            "minimum": 0,
+            "default": 0
+        },
+        "scroll_past_end": {
+            "type": "boolean",
+            "title": "Set to false to disable scrolling past the end of the buffer.",
+            "description": "On Mac, this value is overridden in the platform specific settings, so you'll need to place this line in your user settings to override it.",
+            "default": true
+        },
+        "move_to_limit_on_up_down": {
+            "type": "boolean",
+            "title": "This controls what happens when pressing up or down when on the first or last line.",
+            "description": "On Mac, this value is overridden in the platform specific settings, so you'll need to place this line in your user settings to override it.",
+            "default": true
+        },
+        "draw_white_space": {
+            "type": "string",
+            "title": "Set to \"none\" to turn off drawing white space, \"selection\" to draw only the white space within the selection, and \"all\" to draw all white space",
+            "enum": [
+                "none",
+                "selection",
+                "all"
+            ],
+            "default": "selection"
+        },
+        "draw_indent_guides": {
+            "type": "boolean",
+            "title": "Set to false to turn off the indentation guides.",
+            "description": "The color and width of the indent guides may be customized by editing the corresponding .tmTheme file, and specifying the colors \"guide\", \"activeGuide\" and \"stackGuide\"",
+            "default": true
+        },
+        "indent_guide_options": {
+            "type": "array",
+            "title": "Controls how the indent guides are drawn, valid options are \"draw_normal\" and \"draw_active\".",
+            "description": "draw_active will draw the indent guides containing the caret in a different color.",
+            "enum": [
+                "draw_normal",
+                "draw_active"
+            ],
+            "default": [
+                "draw_normal"
+            ]
+        },
+        "trim_trailing_white_space_on_save": {
+            "type": "boolean",
+            "title": "Set to true to removing trailing white space on save",
+            "default": false
+        },
+        "ensure_newline_at_eof_on_save": {
+            "type": "boolean",
+            "title": "Set to true to ensure the last line of the file ends in a newline character when saving",
+            "default": false
+        },
+        "save_on_focus_lost": {
+            "type": "boolean",
+            "title": "Set to true to automatically save files when switching to a different file or application",
+            "default": false
+        },
+        "atomic_save": {
+            "type": "boolean",
+            "title": "Save via writing to an alternate file, and then renaming it over the original file.",
+            "default": false
+        },
+        "fallback_encoding": {
+            "type": "string",
+            "title": "The encoding to use when the encoding can't be determined automatically.",
+            "description": "ASCII, UTF-8 and UTF-16 encodings will be automatically detected.",
+            "default": "Western (Windows 1252)"
+        },
+        "default_encoding": {
+            "type": "string",
+            "title": "Encoding used when saving new files, and files opened with an undefined encoding (e.g., plain ascii files).",
+            "description": "If a file is opened with a specific encoding (either detected or given explicitly), this setting will be ignored, and the file will be saved with the encoding it was opened",
+            "default": "UTF-8"
+        },
+        "enable_hexadecimal_encoding": {
+            "type": "boolean",
+            "title": "Files containing null bytes are opened as hexadecimal by default",
+            "default": true
+        },
+        "default_line_ending": {
+            "type": "string",
+            "title": "Determines what character(s) are used to terminate each line in new files.",
+            "description": "Valid values are 'system' (whatever the OS uses), 'windows' (CRLF) and 'unix' (LF only).",
+            "enum": [
+                "system",
+                "windows",
+                "unix"
+            ],
+            "default": "system"
+        },
+        "show_definitions": {
+            "type": "boolean",
+            "title": "When enabled, hovering over a word will show a popup listing all possible locations for the definition symbol. Requires index_files.",
+            "description": "Requires index_files.",
+            "default": true
+        },
+        "tab_completion": {
+            "type": "boolean",
+            "title": "When enabled, pressing tab will insert the best matching completion.",
+            "description": "When disabled, tab will only trigger snippets or insert a tab. Shift+tab can be used to insert an explicit tab when tab_completion is enabled.",
+            "default": true
+        },
+        "auto_complete": {
+            "type": "boolean",
+            "title": "Enable auto complete to be triggered automatically when typing.",
+            "default": true
+        },
+        "auto_complete_size_limit": {
+            "type": "number",
+            "title": "The maximum file size where auto complete will be automatically triggered.",
+            "default": 4194304,
+            "minimum": 0
+        },
+        "auto_complete_delay": {
+            "type": "number",
+            "title": "The delay, in ms, before the auto complete window is shown after typing",
+            "default": 50,
+            "minimum": 0
+        },
+        "auto_complete_selector": {
+            "type": "string",
+            "title": "Controls what scopes auto complete will be triggered in",
+            "default": "meta.tag - punctuation.definition.tag.begin, source - comment - string.quoted.double.block - string.quoted.single.block - string.unquoted.heredoc"
+        },
+        "auto_complete_triggers": {
+            "type": "array",
+            "title": "Additional situations to trigger auto complete",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "selector": {
+                        "type": "string"
+                    },
+                    "characters": {
+                        "type": "string"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "default": [
+                {
+                    "selector": "text.html",
+                    "characters": "<"
+                }
+            ]
+        },
+        "auto_complete_commit_on_tab": {
+            "type": "boolean",
+            "title": "By default, auto complete will commit the current completion on enter.",
+            "description": "This setting can be used to make it complete on tab instead. Completing on tab is generally a superior option, as it removes ambiguity between committing the completion and inserting a newline.",
+            "default": false
+        },
+        "auto_complete_with_fields": {
+            "type": "boolean",
+            "title": "Controls if auto complete is shown when snippet fields are active.",
+            "description": "Only relevant if auto_complete_commit_on_tab is true.",
+            "default": false
+        },
+        "auto_complete_cycle": {
+            "type": "boolean",
+            "title": "Controls what happens when pressing the up key while the first item in the auto complete window is selected: if false, the window is hidden, otherwise the last item in the window is selected.",
+            "description": "Likewise for the down key when the last item is selected.",
+            "default": false
+        },
+        "auto_close_tags": {
+            "type": "boolean",
+            "description": "Automatically close HTML and XML tags when </ is entered.",
+            "default": true
+        },
+        "shift_tab_unindent": {
+            "type": "boolean",
+            "title": "By default, shift+tab will only unindent if the selection spans multiple lines.",
+            "description": "When pressing shift+tab at other times, it'll insert a tab character - this allows tabs to be inserted when tab_completion is enabled. Set this to true to make shift+tab always unindent, instead of inserting tabs.",
+            "default": false
+        },
+        "copy_with_empty_selection": {
+            "type": "boolean",
+            "title": "If true, the copy and cut commands will operate on the current line when the selection is empty, rather than doing nothing.",
+            "default": true
+        },
+        "find_selected_text": {
+            "type": "boolean",
+            "title": "If true, the selected text will be copied into the find panel when it's shown.",
+            "description": "On Mac, this value is overridden in the platform specific settings, so you'll need to place this line in your user settings to override it.",
+            "default": true
+        },
+        "auto_find_in_selection": {
+            "type": "boolean",
+            "title": "When auto_find_in_selection is enabled, the \"Find in Selection\" flag will be enabled automatically when multiple lines of text are selected",
+            "default": false
+        },
+        "drag_text": {
+            "type": "boolean",
+            "title": "When drag_text is enabled, clicking on selected text will begin a drag-drop operation. This is not currently implemented under Linux.",
+            "description": "This is not currently implemented under Linux.",
+            "default": true
+        },
+        "theme": {
+            "type": "string",
+            "title": "The theme controls the look of Sublime Text's UI (buttons, tabs, scroll bars, etc)",
+            "default": "Default.sublime-theme"
+        },
+        "scroll_speed": {
+            "type": "number",
+            "title": "Set to 0 to disable smooth scrolling.",
+            "description": "Set to a value between 0 and 1 to scroll slower, or set to larger than 1 to scroll faster",
+            "minimum": 0,
+            "default": 1.0
+        },
+        "tree_animation_enabled": {
+            "type": "boolean",
+            "title": "Controls side bar animation when expanding or collapsing folders",
+            "default": true
+        },
+        "animation_enabled": {
+            "type": "boolean",
+            "title": "Controls animation throughout the application",
+            "default": true
+        },
+        "highlight_modified_tabs": {
+            "type": "boolean",
+            "title": "Makes tabs with modified files more visible",
+            "default": false
+        },
+        "show_tab_close_buttons": {
+            "type": "boolean",
+            "default": true
+        },
+        "bold_folder_labels": {
+            "type": "boolean",
+            "title": "Show folders in the side bar in bold",
+            "default": false
+        },
+        "adaptive_dividers": {
+            "type": "boolean",
+            "title": "Draw divider lines between sections of the UI when using the Adaptive theme",
+            "default": false
+        },
+        "gpu_window_buffer": {
+            "type": [
+                "string",
+                "boolean"
+            ],
+            "title": "Mac only. Valid values are true, false, and \"auto\".",
+            "description": "Auto will enable the setting when running on a screen 2560 pixels or wider (i.e., a Retina display). When this setting is enabled, OpenGL is used to accelerate drawing. Sublime Text must be restarted for changes to take effect.",
+            "enum": [
+                "auto",
+                true,
+                false
+            ],
+            "default": "auto",
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "boolean"
+                }
+            ]
+        },
+        "native_tabs": {
+            "type": "string",
+            "title": "Mac only. Controls use of macOS tabs in 10.12 and newer.",
+            "description": "Each native tab contains an entire project, thus allowing multiple projects in a single window. Valid values are \"system\", \"preferred\" and \"disabled\".",
+            "enum": [
+                "system",
+                "preferred",
+                "disabled"
+            ],
+            "default": "system"
+        },
+        "overlay_scroll_bars": {
+            "type": "string",
+            "title": "Valid values are \"system\", \"enabled\" and \"disabled\"",
+            "enum": [
+                "system",
+                "enabled",
+                "disabled"
+            ],
+            "default": "system"
+        },
+        "enable_tab_scrolling": {
+            "type": "boolean",
+            "title": "Allows tabs to scroll left and right, instead of simply shrinking",
+            "default": true
+        },
+        "show_encoding": {
+            "type": "boolean",
+            "title": "Display file encoding in the status bar",
+            "default": false
+        },
+        "show_line_endings": {
+            "type": "boolean",
+            "title": "Display line endings in the status bar",
+            "default": false
+        },
+        "ui_scale": {
+            "type": "number",
+            "title": "Magnifies the entire user interface.",
+            "description": "Sublime Text must be restarted for this to take effect. 1.0 is normal scale, 0.0 allows for auto-detection based on text scale with older Linux configurations that don't fully support GTK display scaling.",
+            "minimum": 0,
+            "default": 0.0,
+            "anyOf": [
+                {
+                    "oneOf": [
+                        {
+                            "enum": [
+                                0
+                            ],
+                            "description": "0.0 allows for auto-detection based on text scale with older Linux configurations that don't fully support GTK display scaling."
+                        },
+                        {
+                            "enum": [
+                                1
+                            ],
+                            "description": "1.0 is normal scale"
+                        }
+                    ]
+                }
+            ]
+        },
+        "hot_exit": {
+            "type": "boolean",
+            "title": "Exiting the application with hot_exit enabled will cause it to close immediately without prompting.",
+            "description": "Unsaved modifications and open files will be preserved and restored when next starting.\n\nClosing a window with an associated project will also close the window without prompting, preserving unsaved changes in the workspace file alongside the project.",
+            "default": true
+        },
+        "remember_full_screen": {
+            "type": "boolean",
+            "title": "remember_full_screen will allow Sublime Text to start in full screen mode if it was exited in full screen mode.",
+            "description": "When set to false, Sublime Text will never start in full screen mode.",
+            "default": false
+        },
+        "shell_environment": {
+            "type": "boolean",
+            "title": "Mac only. If the user's default shell should be invoked to obtain the user's customized environment variables.",
+            "description": "May be a boolean, or a string of the path the shell to invoke. Sublime Text must be restarted for this to take effect.",
+            "default": true
+        },
+        "always_prompt_for_file_reload": {
+            "type": "boolean",
+            "title": "Always prompt before reloading a file, even if the file hasn't been modified.",
+            "description": "The default behavior is to automatically reload a file if it hasn't been edited. If a file has unsaved changes, a prompt will always be shown.",
+            "default": false
+        },
+        "open_files_in_new_window": {
+            "type": "boolean",
+            "description": "Mac only: When files are opened from finder, or by dragging onto the dock icon, this controls if a new window is created or not.",
+            "default": true
+        },
+        "create_window_at_startup": {
+            "type": "boolean",
+            "title": "Mac only: This controls if an empty window is created at startup or not.",
+            "default": true
+        },
+        "show_navigation_bar": {
+            "type": "boolean",
+            "title": "Mac only: Show recent files on the Touch Bar.",
+            "default": true
+        },
+        "close_windows_when_empty": {
+            "type": "boolean",
+            "title": "Set to true to close windows as soon as the last file is closed, unless there's a folder open within the window.",
+            "description": "On Mac, this value is overridden in the platform specific settings, so you'll need to place this line in your user settings to override it.",
+            "default": false
+        },
+        "show_full_path": {
+            "type": "boolean",
+            "title": "Show the full path to files in the title bar.",
+            "description": "On Mac, this value is overridden in the platform specific settings, so you'll need to place this line in your user settings to override it.",
+            "default": true
+        },
+        "show_panel_on_build": {
+            "type": "boolean",
+            "title": "Shows the Build Results panel when building.",
+            "description": "If set to false, the Build Results can be shown via the Tools/Build Results menu.",
+            "default": true
+        },
+        "show_errors_inline": {
+            "type": "boolean",
+            "title": "Shows build errors just under the line on which they occur.",
+            "default": true
+        },
+        "show_git_status": {
+            "type": "boolean",
+            "title": "Shows git repository information next to files in sidebar and in the status bar.",
+            "description": "Sublime Text has to be restarted for this to take effect.",
+            "default": true
+        },
+        "allow_git_home_dir": {
+            "type": "boolean",
+            "title": "Enables showing git status for a git repository in the user's home directory.",
+            "description": "This is disabled by default since it is typically accidental and can cause heavy CPU usage related to file system watches.",
+            "default": false
+        },
+        "git_diff_target": {
+            "type": "string",
+            "title": "This setting determines whether tracked Git files should be diffed against the index or HEAD.",
+            "description": "Valid values are \"index\" or \"head\"",
+            "enum": [
+                "index",
+                "head"
+            ],
+            "default": "index"
+        },
+        "preview_on_click": {
+            "type": "boolean",
+            "title": "Preview file contents when clicking on a file in the side bar.",
+            "description": "Double clicking or editing the preview will open the file and assign it a tab.",
+            "default": true
+        },
+        "folder_exclude_patterns": {
+            "type": "array",
+            "title": "folder_exclude_patterns control which files are listed in folders on the side bar",
+            "description": "These can also be set on a per-project basis.",
+            "items": {
+                "type": "string",
+                "minLength": 1
+            },
+            "default": [
+                ".svn",
+                ".git",
+                ".hg",
+                "CVS"
+            ]
+        },
+        "file_exclude_patterns": {
+            "type": "array",
+            "title": "file_exclude_patterns control which files are listed in folders on the side bar",
+            "description": "These can also be set on a per-project basis.",
+            "items": {
+                "type": "string",
+                "minLength": 1
+            },
+            "default": [
+                "*.pyc",
+                "*.pyo",
+                "*.exe",
+                "*.dll",
+                "*.obj",
+                "*.o",
+                "*.a",
+                "*.lib",
+                "*.so",
+                "*.dylib",
+                "*.ncb",
+                "*.sdf",
+                "*.suo",
+                "*.pdb",
+                "*.idb",
+                ".DS_Store",
+                "*.class",
+                "*.psd",
+                "*.db",
+                "*.sublime-workspace"
+            ]
+        },
+        "binary_file_patterns": {
+            "type": "array",
+            "title": "These files will still show up in the side bar, but won't be included in Goto Anything or Find in Files",
+            "items": {
+                "type": "string",
+                "minLength": 1
+            },
+            "default": [
+                "*.jpg",
+                "*.jpeg",
+                "*.png",
+                "*.gif",
+                "*.ttf",
+                "*.tga",
+                "*.dds",
+                "*.ico",
+                "*.eot",
+                "*.pdf",
+                "*.swf",
+                "*.jar",
+                "*.zip"
+            ]
+        },
+        "index_files": {
+            "type": "boolean",
+            "title": "File indexing parses all files in the side bar, and builds an index of their symbols. This is required for Goto Definition to work.",
+            "description": "This is required for Goto Definition to work.",
+            "default": true
+        },
+        "index_workers": {
+            "type": "number",
+            "title": "Set the number threads to use for indexing.",
+            "description": "A value of 0 will make Sublime Text guess based on the number of cores. Use the index_files setting to disable all workers.",
+            "minimum": 0,
+            "default": 0,
+            "anyOf": [
+                {
+                    "oneOf": [
+                        {
+                            "enum": [
+                                0
+                            ],
+                            "description": "A value of 0 will make Sublime Text guess based on the number of cores."
+                        }
+                    ]
+                }
+            ]
+        },
+        "index_exclude_patterns": {
+            "type": "array",
+            "title": "index_exclude_patterns indicate which files won't be indexed.",
+            "items": {
+                "type": "string",
+                "minLength": 1
+            },
+            "default": [
+                "*.log"
+            ]
+        },
+        "ignored_packages": {
+            "type": "array",
+            "title": "List any packages to ignore here.",
+            "items": {
+                "type": "string"
+            },
+            "default": [
+                "Vintage"
+            ]
+        }
+    },
+    "dependencies": {
+        "smart_indent": [
+            "auto_indent"
+        ],
+        "indent_to_bracket": [
+            "auto_indent"
+        ],
+        "show_definitions": [
+            "index_files"
+        ],
+        "match_brackets_angle": [
+            "match_brackets"
+        ]
+    }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "sublime-schemas",
+  "version": "0.0.1",
+  "description": "Sublime Text related JSON Schemas",
+  "main": "index.js",
+  "scripts": {
+    "generate-settings": "node ./scripts/generate-json-schema ./test/Preferences.sublime-settings",
+    "generate-project": "node ./scripts/generate-json-schema ./test/Project.sublime-project",
+    "generate-workspace": "node ./scripts/generate-json-schema ./test/Workspace.sublime-workspace",
+    "generate-build": "node ./scripts/generate-json-schema ./test/Build.sublime-build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/actuosus/sublime-schemas.git"
+  },
+  "keywords": [
+    "json",
+    "schema",
+    "sublime",
+    "text",
+    "build",
+    "project",
+    "workspace",
+    "settings"
+  ],
+  "author": "Arthur Chafonov <actuosus@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/actuosus/sublime-schemas/issues"
+  },
+  "homepage": "https://github.com/actuosus/sublime-schemas#readme",
+  "devDependencies": {
+    "ajv": "^6.10.2",
+    "jsonc-parser": "^2.2.0"
+  }
+}
