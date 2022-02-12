@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/actuosus/sublime-schemas#readme",
   "devDependencies": {
-    "ajv": "^6.10.2",
+    "ajv": "^6.12.3",
     "jsonc-parser": "^2.2.0"
   }
 }
